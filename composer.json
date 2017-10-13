@@ -1,0 +1,14 @@
+{
+	"name": "timkelty/craft2-defaulttext",
+	"description": "Provides versions of Rich Text and Plain Text with defaults.",
+	"type": "craft-plugin",
+	"authors": [
+		{
+			"name": "Tim Kelty",
+			"homepage": "https://github.com/timkelty"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}

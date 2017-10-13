@@ -1,0 +1,20 @@
+{% import "_includes/forms" as forms %}
+
+{% set instructions -%}
+	The text to be rendered if the field doesn't have a value.<br>
+	You can include tags that output element properties, such as {title} or {myCustomField}.
+{%- endset %}
+
+{% set fieldSettings = {
+	label: 'Default Value',
+	name: 'defaultValue',
+	value: settings.defaultValue,
+	instructions: instructions,
+	rows: initialRows ?? 4,
+} %}
+
+{% if multiline ?? false %}
+	{{ forms.textAreaField(fieldSettings) }}
+{% else %}
+	{{ forms.textField(fieldSettings) }}
+{% endif %}
