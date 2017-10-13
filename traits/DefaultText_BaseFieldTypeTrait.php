@@ -15,13 +15,11 @@ trait DefaultText_BaseFieldTypeTrait
 
     public function prepValue($value)
     {
-        $value = parent::prepValue($value);
-
-        if (!$value) {
-            return craft()->templates->renderObjectTemplate($this->settings->defaultValue, $this->element);
+        if (!$value && craft()->request->isSiteRequest()) {
+            $value = craft()->templates->renderObjectTemplate($this->settings->defaultValue, $this->element);
         }
 
-        return $value;
+        return parent::prepValue($value);
     }
 
     protected function defineSettings()
