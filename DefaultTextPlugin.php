@@ -42,7 +42,7 @@ class DefaultTextPlugin extends BasePlugin
      */
     public function getDocumentationUrl()
     {
-        return 'https://github.com/timkelty/defaulttext/blob/master/README.md';
+        return 'https://github.com/timkelty/craft2-defaulttext/blob/master/README.md';
     }
 
     /**
@@ -50,7 +50,7 @@ class DefaultTextPlugin extends BasePlugin
      */
     public function getReleaseFeedUrl()
     {
-        return 'https://raw.githubusercontent.com/timkelty/defaulttext/master/releases.json';
+        return 'https://raw.githubusercontent.com/timkelty/craft2-defaulttext/master/releases.json';
     }
 
     /**
